@@ -5,188 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Akash P A</title>
   <style>
-    /* ANIMATED SOLID BACKGROUND */
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
+      background: #000;
       color: #fff;
-      animation: solidColorBG 20s ease infinite;
-      /* starting color fallback */
-      background-color: #1f1c2c;
     }
 
-    @keyframes solidColorBG {
-      0%   { background-color: #1f1c2c; }
-      33%  { background-color: #4ca1af; }
-      66%  { background-color: #928dab; }
-      100% { background-color: #1f1c2c; }
-    }
-
-    /* NAVBAR */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: flex-end;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 15px 30px;
-      backdrop-filter: blur(10px);
-      gap: 30px;
+    .top-left-name {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
       font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 80px;
+      flex-wrap: wrap;
     }
 
     nav a {
-      color: #00ffcc;
+      color: white;
       text-decoration: none;
-      font-size: 16px;
-      align-self: center;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* NAME TOP LEFT */
-    .top-left-name {
-      position: fixed;
-      top: 15px;
-      left: 20px;
-      font-size: 1.5em;
       font-weight: bold;
-      color: #00ffcc;
-      animation: fadeSlideIn 1.5s ease forwards;
-      opacity: 0;
-      transform: translateX(-20px);
-      z-index: 1100;
-      user-select: none;
-      font-family: 'Arial', sans-serif;
-      letter-spacing: 1.2px;
-    }
-
-    @keyframes fadeSlideIn {
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
     }
 
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 80px 20px 40px; /* top padding increased for fixed elements */
-      max-width: 900px;
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .default-dp {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
       margin: 0 auto;
     }
 
-    img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      object-fit: cover;
-      margin-bottom: 30px;
+    h1, h2 {
+      color: white;
+      text-align: center;
     }
 
-    h1 {
-      font-size: 2.5em;
-      margin: 10px 0;
-      letter-spacing: 1px;
+    .subtitle {
+      font-style: italic;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    p.subtitle {
-      color: #ddd;
-      font-size: 1.1em;
-      margin-bottom: 30px;
+    .glass-section {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 30px;
+      margin: 40px 0;
     }
 
-    .section {
-      max-width: 700px;
-      margin: 30px 0;
-      padding: 0 20px;
-    }
-
-    h2 {
-      color: #00ffcc;
-      margin-bottom: 10px;
-    }
-
-    /* SKILLS ANIMATION */
     .skills-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 15px;
-      margin-top: 10px;
     }
 
     .skill {
-      background-color: rgba(0, 255, 204, 0.1);
-      border: 1px solid #00ffcc;
-      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.1);
       padding: 10px 20px;
-      animation: fadeSlide 1s ease forwards;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    .skill:nth-child(1) { animation-delay: 0.2s; }
-    .skill:nth-child(2) { animation-delay: 0.4s; }
-    .skill:nth-child(3) { animation-delay: 0.6s; }
-    .skill:nth-child(4) { animation-delay: 0.8s; }
-    .skill:nth-child(5) { animation-delay: 1s; }
-    .skill:nth-child(6) { animation-delay: 1.2s; }
-
-    @keyframes fadeSlide {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      border-radius: 20px;
+      font-size: 16px;
     }
 
     .social-buttons {
-      margin-top: 30px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .social-buttons a {
-      display: inline-block;
-      background-color: #00ffcc;
-      color: #111;
-      padding: 10px 20px;
-      margin: 10px;
-      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s, transform 0.3s;
     }
 
-    .social-buttons a:hover {
-      background-color: #00ccaa;
-      transform: scale(1.05);
-    }
-
-    footer {
-      margin-top: 50px;
-      color: #ccc;
-      font-size: 0.9em;
+      footer {
       text-align: center;
-      padding-bottom: 30px;
+      margin-top: 40px;
+      font-size: 14px;
+      opacity: 0.6;
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 2em; }
-      img { width: 120px; height: 120px; }
-      nav {
-        justify-content: center;
-        gap: 20px;
-        padding: 10px 15px;
+      .default-dp {
+        width: 150px;
+        height: 150px;
       }
-      .top-left-name {
-        font-size: 1.2em;
-        top: 10px;
-        left: 10px;
+      nav {
+        flex-direction: column;
+        gap: 10px;
       }
     }
   </style>
@@ -198,47 +124,47 @@
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
+    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <div class="container" id="home">
-    <img src="profile.jpeg" alt="Profile Picture" />
+    <img class="default-dp" src="Default_pfp.jpg" alt="Default Male Profile Picture" />
+    
     <h1>Akash P A</h1>
-    <p class="subtitle">B.Tech Student • Gaming • Photographer</p>
+    <p class="subtitle">B.Tech Student</p>
 
-    <div class="section" id="about">
+    <div class="glass-section" id="about">
       <h2>About Me</h2>
-      <p>Hi, my name is AKASH. I’m currently pursuing my B.Tech in Computer Science Engineering at Amal Jyothi College of Engineering. I'm passionate about technology and love building things that solve real-world problems. Alongside my studies, I explore web development, programming, and creative fields like photography and video editing.</p>
-      <p>While I stay focused on academics, I’ll admit — I enjoy gaming more than studying! It’s not just fun, but also helps me relax and connect with friends. Whether it’s coding or gaming, I’m all about creativity, learning, and enjoying what I do.</p>
+      <p>Hi, my name is AKASH. I’m currently pursuing my B.Tech in Computer Science Engineering at Amal Jyothi College of Engineering...</p>
+      <p>...Whether it’s coding or gaming, I’m all about creativity, learning, and enjoying what I do.</p>
     </div>
 
-    <div class="section">
+    <div class="glass-section" id="skills">
       <h2>Skills</h2>
       <div class="skills-list">
         <div class="skill">Gaming</div>
         <div class="skill">HTML</div>
         <div class="skill">C++</div>
         <div class="skill">Python</div>
-        <div class="skill">Photography</div>
-        <div class="skill">Video Editing</div>
-      </div>
+        </div>
     </div>
 
-    <div class="section" id="contact">
+    <div class="glass-section" id="projects">
+      <h2>Projects</h2>
+      <p>Coming soon: Portfolio of my personal and academic projects with code and previews!</p>
+    </div>
+
+    <div class="glass-section" id="contact">
       <h2>Contact</h2>
       <p>Email: akash390d@example.com</p>
       <p>Phone: +91 7012182242</p>
     </div>
 
     <div class="social-buttons">
-      <a href="https://www.instagram.com/akashhh.a_?igsh=MTM0OW00Z3BmMGpzeQ%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+      <a href="https://www.instagram.com/akashhh.a_" target="_blank">Instagram</a>
       <a href="http://linkedin.com/in/akash-p-a-a86436338" target="_blank">LinkedIn</a>
     </div>
-
-    <footer>
-      &copy; 2025 Akash P A
-    </footer>
-  </div>
 
 </body>
 </html>
